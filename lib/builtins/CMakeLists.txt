@@ -438,7 +438,17 @@ set(mipsel_SOURCES ${mips_SOURCES})
 set(mips64_SOURCES ${mips_SOURCES})
 set(mips64el_SOURCES ${mips_SOURCES})
 
-set(wasm32_SOURCES ${GENERIC_SOURCES})
+set(wasm32_SOURCES
+	comparetf2.c
+	floatsitf.c
+	fixunstfsi.c
+	fixtfsi.c
+	floatunsitf.c
+	extenddftf2.c
+	extendsftf2.c
+	trunctfdf2.c
+	trunctfsf2.c
+	${GENERIC_SOURCES})
 set(wasm64_SOURCES ${GENERIC_SOURCES})
 
 add_custom_target(builtins)
